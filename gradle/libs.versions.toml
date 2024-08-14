@@ -17,8 +17,12 @@ mockito-core-version = "5.12.0"
 silly-collection-version = "27.1"
 silly-io-version = "3.1"
 throwable-version = "3"
+auth-version = "6"
+auth-api-version = "6"
 
 [libraries]
+auth = { module = "io.github.astrapi69:auth", version.ref = "auth-version" }
+auth-api = { module = "io.github.astrapi69:auth-api", version.ref = "auth-api-version" }
 commons-text = { module = "org.apache.commons:commons-text", version.ref = "commons-text-version" }
 file-worker = { module = "io.github.astrapi69:file-worker", version.ref = "file-worker-version" }
 gradle-migration-data = { module = "io.github.astrapi69:gradle-migration-data", version.ref = "gradle-migration-data-version" }
