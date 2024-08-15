@@ -29,17 +29,20 @@ import io.github.astrapi69.design.pattern.observer.api.Subject;
 import io.github.astrapi69.design.pattern.observer.exception.ExceptionEvent;
 
 /**
- * The Class DemonstrateObserverPattern.
+ * The class {@link DemonstrateObserverPattern} demonstrates the use of the observer design pattern
+ * with exception events It creates a subject that can notify multiple observers about exception
+ * events.
  */
 public class DemonstrateObserverPattern
 {
 
 	/**
-	 * The main method.
+	 * The main method to start the demonstration.
 	 *
 	 * @param args
-	 *            the args
+	 *            the command line arguments
 	 * @throws InterruptedException
+	 *             if the thread sleep is interrupted
 	 */
 	public static void main(final String[] args) throws InterruptedException
 	{
@@ -68,5 +71,4 @@ public class DemonstrateObserverPattern
 		System.out.println("Set the second Observable...");
 		eventSubject.setObservable(exceptionEvent);
 	}
-
 }

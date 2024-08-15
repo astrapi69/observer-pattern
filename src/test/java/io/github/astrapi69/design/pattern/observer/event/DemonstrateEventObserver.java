@@ -27,9 +27,22 @@ package io.github.astrapi69.design.pattern.observer.event;
 import io.github.astrapi69.design.pattern.observer.api.Observer;
 import io.github.astrapi69.design.pattern.observer.api.Subject;
 
+/**
+ * The class {@link DemonstrateEventObserver} demonstrates the use of the observer design pattern
+ * with events It shows how to create a {@link Subject} and an {@link Observer} that react to
+ * changes in the subject's state.
+ */
 public class DemonstrateEventObserver
 {
 
+	/**
+	 * The main method to start the demonstration.
+	 *
+	 * @param args
+	 *            the command line arguments
+	 * @throws InterruptedException
+	 *             if the thread sleep is interrupted
+	 */
 	public static void main(final String[] args) throws InterruptedException
 	{
 		System.out.println("Create a Subject...");

@@ -29,16 +29,18 @@ import io.github.astrapi69.design.pattern.observer.api.Subject;
 import io.github.astrapi69.design.pattern.observer.exception.ExceptionEvent;
 
 /**
- * The Class ShowExceptionView.
+ * The class {@link ShowExceptionView} is an implementation of the {@link Observer} interface that
+ * listens for changes in {@link ExceptionEvent} instances and reacts to those changes by displaying
+ * the exception message.
  */
 public class ShowExceptionView extends AbstractObserver<ExceptionEvent>
 {
 
 	/**
-	 * Instantiates a new show exception view.
+	 * Instantiates a new {@code ShowExceptionView} to observe the specified subject.
 	 *
 	 * @param subject
-	 *            the subject
+	 *            the subject to observe
 	 */
 	public ShowExceptionView(final Subject<ExceptionEvent, Observer<ExceptionEvent>> subject)
 	{
@@ -46,15 +48,14 @@ public class ShowExceptionView extends AbstractObserver<ExceptionEvent>
 	}
 
 	/**
-	 * (non-Javadoc).
+	 * Executes the action when the observed {@link ExceptionEvent} changes This method prints the
+	 * message of the exception to the console.
 	 *
-	 * @see io.github.astrapi69.design.pattern.observer.api.ActionCommand#execute()
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void execute()
 	{
 		System.out.println("From ShowExceptionView:::" + getObservable().getValue() + ":::");
-
 	}
-
 }

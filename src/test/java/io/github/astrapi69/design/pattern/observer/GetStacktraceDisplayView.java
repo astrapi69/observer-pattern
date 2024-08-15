@@ -29,16 +29,18 @@ import io.github.astrapi69.design.pattern.observer.api.Subject;
 import io.github.astrapi69.design.pattern.observer.exception.ExceptionEvent;
 
 /**
- * The Class GetStacktraceDisplayView.
+ * The class {@link GetStacktraceDisplayView} is an implementation of the {@link Observer} interface
+ * that listens for changes in {@link ExceptionEvent} instances and reacts to those changes by
+ * displaying the stack trace of the exception.
  */
 public class GetStacktraceDisplayView extends AbstractObserver<ExceptionEvent>
 {
 
 	/**
-	 * Instantiates a new gets the stacktrace display view.
+	 * Instantiates a new {@code GetStacktraceDisplayView} with the specified subject to observe.
 	 *
 	 * @param subject
-	 *            the subject
+	 *            the subject to observe
 	 */
 	public GetStacktraceDisplayView(final Subject<ExceptionEvent, Observer<ExceptionEvent>> subject)
 	{
@@ -46,17 +48,15 @@ public class GetStacktraceDisplayView extends AbstractObserver<ExceptionEvent>
 	}
 
 	/**
-	 * (non-Javadoc)
+	 * Executes the action when the observed {@link ExceptionEvent} changes This method prints the
+	 * stack trace of the exception to the console.
 	 *
-	 * @see io.github.astrapi69.design.pattern.observer.api.ActionCommand#execute()
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void execute()
 	{
-
-		System.out.print("From GetStacktraceView:");
+		System.out.print("From GetStacktraceDisplayView:");
 		getObservable().getValue().printStackTrace();
-
 	}
-
 }

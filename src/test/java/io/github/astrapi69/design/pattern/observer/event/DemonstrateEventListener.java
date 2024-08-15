@@ -27,47 +27,80 @@ package io.github.astrapi69.design.pattern.observer.event;
 import javax.swing.JTextField;
 
 /**
- * This class is to demonstrate the Event Listener interface.
+ * The class {@link DemonstrateEventListener} demonstrates the usage of the {@link EventListener}
+ * interface It shows how to handle events with and without using an {@link EventObject}, by
+ * printing the text from a {@link JTextField} and its reverse to the console.
  */
 public class DemonstrateEventListener
 {
 
 	/**
-	 * The main method.
+	 * The main method to start the demonstration.
 	 *
 	 * @param args
-	 *            the arguments
+	 *            the command line arguments
 	 */
 	public static void main(final String[] args)
 	{
-
 		withoutEventObject();
-
 		withEventObject();
 	}
 
+	/**
+	 * Demonstrates the usage of an {@link EventListener} without using an {@link EventObject} This
+	 * method creates listeners that print a string and its reverse to the console.
+	 */
+	private static void withoutEventObject()
+	{
+		final EventListener<String> printString = new EventListener<String>()
+		{
+			@Override
+			public void onEvent(final String event)
+			{
+				System.out.println(event);
+			}
+		};
+
+		final EventListener<String> printStringReverse = new EventListener<String>()
+		{
+			@Override
+			public void onEvent(final String event)
+			{
+				System.out.println(new StringBuffer(event).reverse());
+			}
+		};
+
+		final EventSource<String> eventSource = new EventSubject<>();
+		eventSource.add(printString);
+		eventSource.add(printStringReverse);
+		eventSource.fireEvent("Hallo");
+	}
+
+	/**
+	 * Demonstrates the usage of an {@link EventListener} with an {@link EventObject} This method
+	 * creates listeners that print the text from a {@link JTextField} and its reverse to the
+	 * console.
+	 */
 	private static void withEventObject()
 	{
 		final EventListener<EventObject<JTextField>> printString = new EventListener<EventObject<JTextField>>()
 		{
-
 			@Override
 			public void onEvent(final EventObject<JTextField> event)
 			{
 				System.out.println(event.getSource().getText());
-
 			}
 		};
+
 		final EventListener<EventObject<JTextField>> printStringReverse = new EventListener<EventObject<JTextField>>()
 		{
-
 			@Override
 			public void onEvent(final EventObject<JTextField> event)
 			{
 				System.out.println(new StringBuffer(event.getSource().getText()).reverse());
-
 			}
 		};
+
 		final JTextField tx = new JTextField("Hello");
 		final EventObject<JTextField> eventObject = new EventObject<>(tx);
 		final EventSource<EventObject<JTextField>> eventSource = new EventSubject<>();
@@ -76,33 +109,5 @@ public class DemonstrateEventListener
 		eventSource.fireEvent(eventObject);
 		tx.setText("good bye...");
 		eventSource.fireEvent(eventObject);
-	}
-
-	private static void withoutEventObject()
-	{
-		final EventListener<String> printString = new EventListener<String>()
-		{
-
-			@Override
-			public void onEvent(final String event)
-			{
-				System.out.println(event);
-
-			}
-		};
-		final EventListener<String> printStringReverse = new EventListener<String>()
-		{
-
-			@Override
-			public void onEvent(final String event)
-			{
-				System.out.println(new StringBuffer(event).reverse());
-
-			}
-		};
-		final EventSource<String> eventSource = new EventSubject<>();
-		eventSource.add(printString);
-		eventSource.add(printStringReverse);
-		eventSource.fireEvent("Hallo");
 	}
 }

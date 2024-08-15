@@ -24,7 +24,27 @@
  */
 package io.github.astrapi69.design.pattern.observer.event;
 
+/**
+ * The enum {@link State} represents the possible states of an object or process that can be
+ * observed and reacted to within the observer design pattern.
+ *
+ * <p>
+ * The possible states are:
+ * </p>
+ * <ul>
+ * <li>{@link #stop} - Represents a stopped or inactive state</li>
+ * <li>{@link #spinning} - Represents a spinning or active state</li>
+ * </ul>
+ */
 public enum State
 {
-	stop, spinning
+	/**
+	 * Represents a stopped or inactive state.
+	 */
+	stop,
+
+	/**
+	 * Represents a spinning or active state.
+	 */
+	spinning
 }

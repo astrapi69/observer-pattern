@@ -12,8 +12,6 @@
 
 </div>
 
-Generic api for the observer pattern.
-
 > Please support this project by simply putting a Github <a class="github-button" href="https://github.com/astrapi69/observer-pattern" data-icon="octicon-star" aria-label="Star astrapi69/observer-pattern on GitHub">
 > Star ⭐</a>
 >
@@ -21,6 +19,43 @@ Generic api for the observer pattern.
 >
 > If you love this project
 > [![Donation](https://img.shields.io/badge/donate-❤-ff2244.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVBTWLRAZ7HB8)
+
+# Observer Design Pattern in Java
+
+Welcome to the Observer Design Pattern project! This repository provides a comprehensive implementation and demonstration of the Observer design pattern in Java. Whether you're a beginner looking to understand design patterns or an experienced developer seeking a robust implementation, this project is for you.
+Overview
+
+The Observer pattern is a behavioral design pattern where an object, known as the "Subject," maintains a list of its dependents, called "Observers," and notifies them automatically of any state changes. This pattern is widely used in scenarios where a change in one object requires changes in others without tightly coupling the objects.
+
+## This project includes:
+
+* Core interfaces and abstract classes that form the foundation of the Observer pattern.
+* Concrete implementations that demonstrate real-world applications, such as handling exceptions, displaying messages, and more.
+* Swing-based GUI examples to visually showcase the Observer pattern in action.
+
+## Features
+
+* Modular Design: Easily extend the base classes and interfaces to fit your specific use case.
+* Real-World Examples: Understand the Observer pattern through practical examples, including exception handling, event management, and chat systems.
+* Swing GUI: Explore visual demonstrations of the pattern with Java Swing, enhancing your understanding of how the Observer pattern can be applied in desktop applications.
+* Comprehensive Javadoc: Well-documented classes and methods to help you quickly grasp the concepts and integrate them into your projects.
+
+## Project Structure
+
+* src/main/java/io/github/astrapi69/design/pattern/observer/: Contains the core interfaces, abstract classes, and concrete implementations of the Observer pattern.
+* src/test/java/io/github/astrapi69/design/pattern/observer/: Includes test cases to verify the functionality and demonstrate usage.
+* src/test/java/io/github/astrapi69/design/pattern/observer/chat/example/: Contains examples demonstrating the Observer pattern using a chat application with a Swing-based GUI.
+
+## Examples
+# Example 1: Exception Handling with Observer Pattern
+
+The ExceptionEventObserver, ShowExceptionView, and GetStacktraceDisplayView classes demonstrate how to handle exceptions using the Observer pattern. Each observer reacts to changes in the ExceptionEventSubject, either by displaying the exception message or printing the stack trace.
+# Example 2: Chat Application
+
+The ChatApp demonstrates a simple chat room where users can send and receive messages. The ChatRoomUser class observes the ChatRoom for new messages and updates the GUI accordingly.
+# Example 3: Event Management
+
+The DemonstrateEventObserver class shows how to manage events, such as state changes, using the Observer pattern. The StateSubject and EventObserver work together to update the state and notify observers.
 
 ## Note
 
@@ -225,6 +260,21 @@ Create your own fork of [astrapi69/observer-pattern/fork](https://github.com/ast
 To share your changes, [submit a pull request](https://github.com/astrapi69/observer-pattern/pull/new/develop).
 
 Don't forget to add new units tests on your changes.
+
+## Contributing
+
+Contributions are welcome! If you have ideas for new features, find a bug, or want to improve the documentation, feel free to submit an issue or pull request.
+
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull
+
+## Acknowledgements
+
+* Inspired by the classic design patterns described in the "Gang of Four" book.
+* Special thanks to the open-source community for their contributions and feedback.
 
 ## Contacting the Developers
 

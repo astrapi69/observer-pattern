@@ -29,10 +29,6 @@ import java.io.Serializable;
 /**
  * The class {@link ChatMessage} represents a message in a chat application It implements the
  * {@link Message} interface and is serializable
- *
- * @param <T>
- *            the type of the value held by the message, which in this case is a
- *            {@link MessageRoomModelBean}
  */
 public class ChatMessage implements Message<MessageRoomModelBean>, Serializable
 {

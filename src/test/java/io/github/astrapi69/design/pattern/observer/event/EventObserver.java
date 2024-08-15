@@ -28,18 +28,32 @@ import io.github.astrapi69.design.pattern.observer.AbstractObserver;
 import io.github.astrapi69.design.pattern.observer.api.Observer;
 import io.github.astrapi69.design.pattern.observer.api.Subject;
 
+/**
+ * The class {@link EventObserver} is an implementation of the {@link Observer} interface that
+ * listens for changes in the state of a {@link Subject} and reacts to those changes by executing a
+ * specific action.
+ */
 public class EventObserver extends AbstractObserver<State>
 {
 
+	/**
+	 * Constructs a new {@code EventObserver} that observes the given subject.
+	 *
+	 * @param subject
+	 *            the subject to observe
+	 */
 	public EventObserver(final Subject<State, Observer<State>> subject)
 	{
 		super(subject);
 	}
 
+	/**
+	 * Executes the action when the state of the observed subject changes This method prints the
+	 * current state of the cylinder to the console.
+	 */
 	@Override
 	public void execute()
 	{
 		System.out.println("State of cylinder have changed and is " + getObservable().name());
 	}
-
 }

@@ -29,7 +29,14 @@ import io.github.astrapi69.design.pattern.observer.api.Observer;
 import io.github.astrapi69.design.pattern.observer.api.Subject;
 
 /**
- * The Class StateSubject.
+ * The class {@link StateSubject} represents a concrete implementation of the {@link Subject}
+ * interface that manages a list of {@link Observer} objects and notifies them of changes to the
+ * {@link State}.
+ *
+ * <p>
+ * This class extends {@link AbstractSubject}, providing the core functionality for managing
+ * observers and updating them when the state changes.
+ * </p>
  */
 public class StateSubject extends AbstractSubject<State, Observer<State>>
 	implements

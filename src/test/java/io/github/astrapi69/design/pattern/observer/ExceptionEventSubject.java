@@ -29,7 +29,14 @@ import io.github.astrapi69.design.pattern.observer.api.Subject;
 import io.github.astrapi69.design.pattern.observer.exception.ExceptionEvent;
 
 /**
- * The Class EventSubject.
+ * The class {@link ExceptionEventSubject} represents a concrete implementation of the
+ * {@link Subject} interface that manages a list of {@link Observer} objects and notifies them of
+ * changes to {@link ExceptionEvent} instances.
+ *
+ * <p>
+ * This class extends {@link AbstractSubject}, which provides the core functionality for managing
+ * observers and updating them when the observable state changes.
+ * </p>
  */
 public class ExceptionEventSubject extends AbstractSubject<ExceptionEvent, Observer<ExceptionEvent>>
 	implements
