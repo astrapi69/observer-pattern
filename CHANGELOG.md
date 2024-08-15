@@ -4,6 +4,9 @@
 Version 7.1-SNAPSHOT
 -------------
 
+ADDED:
+
+- missing export statements for required packages
 
 Version 7
 -------------

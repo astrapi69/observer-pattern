@@ -21,4 +21,12 @@
 module io.github.astrapisixtynine.design.patterns.observer
 {
 	requires static lombok;
+
+	exports io.github.astrapi69.design.pattern.observer;
+	exports io.github.astrapi69.design.pattern.observer.api;
+	exports io.github.astrapi69.design.pattern.observer.chat;
+	exports io.github.astrapi69.design.pattern.observer.chat.listener;
+	exports io.github.astrapi69.design.pattern.observer.event;
+	exports io.github.astrapi69.design.pattern.observer.exception;
+	exports io.github.astrapi69.design.pattern.observer.exception.handlers;
 }
