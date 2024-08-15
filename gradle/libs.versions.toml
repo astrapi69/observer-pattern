@@ -1,4 +1,6 @@
 [versions]
+auth-api-version = "6"
+auth-version = "6"
 commons-text-version = "1.12.0"
 file-worker-version = "17.4"
 gradle-migration-data-version = "2.4"
@@ -9,16 +11,14 @@ gradle-plugin-spotless-version = "7.0.0.BETA1"
 gradle-plugin-version-catalog-update-version = "0.8.4"
 gradle-plugin-versions-version = "0.51.0"
 junit-jupiter-params-version = "5.11.0"
-junit-jupiter-version = "5.11.0-RC1"
-junit-platform-launcher-version = "1.11.0-RC1"
+junit-jupiter-version = "5.11.0"
+junit-platform-launcher-version = "1.11.0"
 lombok-version = "1.18.34"
 meanbean-version = "3.0.0-M9"
 mockito-core-version = "5.12.0"
 silly-collection-version = "27.1"
 silly-io-version = "3.1"
 throwable-version = "3"
-auth-version = "6"
-auth-api-version = "6"
 
 [libraries]
 auth = { module = "io.github.astrapi69:auth", version.ref = "auth-version" }
